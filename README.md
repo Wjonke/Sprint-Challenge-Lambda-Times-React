@@ -26,12 +26,59 @@ Your base React app has already been created, and includes some components. Incl
 
 Look through the application code. If you have the old Lambda Times (Applied JavaScript) sprint challenge handy, you may compare how the structure of this app differs from that, noting how React gives us very easy to use concise components.
 
+
+
+
+
+
+
+
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+Proptypes are used to verify type of information passed into the props, string, object, array ect. This way, when the wrong type of infomation is being passed in a warning will trigger and let us know.
+This is important to avoid errors and bugs later down the road in development.
+
+
+
 - [ ] Describe a life-cycle event in React?
+
+Mounting: This is where the components are created, those are defined in the constructor. Component did mount is used in this phase and then it renders.
+
+Updating: The app will stay in this phase until data is changed via setState or the app is unmounted or killed off. any changed will trigger a re-render unless "shouldcomponent update is called.
+
+Un-Mounting: A component is removed from the dom, or killed off. componentWillUnmount is called in this phase for any final changes needed as its removed.
+
+Also known as the birth, growth and death phases
+
+
+
 - [ ] Explain the details of a Higher Order Component?
+
+HOC are used to make sharing common functionality easier between components. This gives us the ability to "re-use" logic and keep code DRY.
+A HOC is used to conditionally render a component to the screen, such as authentication for log-in. 
+It receives a component as an argument and returns a new component
+
+
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+Reactstrap- prebuilt library of styles that can easily be added to a compnent to style it. difficult to customize.
+inline-styling - styling directly in the component with "from-scratch" css, 100% cusomizable, takes longer.
+Styled-components- meets somewhere in the middle between being a precomposed but hard to manipulate library, and being 100% from scratch.
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Project Setup
 
