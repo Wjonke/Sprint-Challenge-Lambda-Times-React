@@ -26,38 +26,85 @@ Your base React app has already been created, and includes some components. Incl
 
 Look through the application code. If you have the old Lambda Times (Applied JavaScript) sprint challenge handy, you may compare how the structure of this app differs from that, noting how React gives us very easy to use concise components.
 
+
+
+
+
+
+
+
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+Proptypes are used to verify type of information passed into the props, string, object, array ect. This way, when the wrong type of infomation is being passed in a warning will trigger and let us know.
+This is important to avoid errors and bugs later down the road in development.
+
+
+
 - [ ] Describe a life-cycle event in React?
+
+Mounting: This is where the components are created, those are defined in the constructor. Component did mount is used in this phase and then it renders.
+
+Updating: The app will stay in this phase until data is changed via setState or the app is unmounted or killed off. any changed will trigger a re-render unless "shouldcomponent update is called.
+
+Un-Mounting: A component is removed from the dom, or killed off. componentWillUnmount is called in this phase for any final changes needed as its removed.
+
+Also known as the birth, growth and death phases
+
+
+
 - [ ] Explain the details of a Higher Order Component?
+
+HOC are used to make sharing common functionality easier between components. This gives us the ability to "re-use" logic and keep code DRY.
+A HOC is used to conditionally render a component to the screen, such as authentication for log-in. 
+It receives a component as an argument and returns a new component
+
+
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+Reactstrap- prebuilt library of styles that can easily be added to a compnent to style it. difficult to customize.
+inline-styling - styling directly in the component with "from-scratch" css, 100% cusomizable, takes longer.
+Styled-components- meets somewhere in the middle between being a precomposed but hard to manipulate library, and being 100% from scratch.
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Project Setup
 
 Follow these steps to set up your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your project manager as collaborator on Github.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
-- [ ] From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps.
-- [ ] Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
+- [x] Create a forked copy of this project.
+- [x] Add your project manager as collaborator on Github.
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!).
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
+- [x] From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps.
+- [x] Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
-- [ ] Add your project manager as a reviewer on the pull-request
-- [ ] Your project manager will count the project as complete by merging the branch back into master.
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
+- [x] Add your project manager as a reviewer on the pull-request
+- [x] Your project manager will count the project as complete by merging the branch back into master.
 
 ## Minimum Viable Product
 
-- [ ] Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
-- [ ] Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
-- [ ] You should now be able to filter cards using your tabs!
-- [ ] Make sure all of your props being passed are validated using PropTypes.
+- [x] Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
+- [x] Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
+- [x] You should now be able to filter cards using your tabs!
+- [x] Make sure all of your props being passed are validated using PropTypes.
 - [ ] Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished.
 
 ## Stretch Challenge
